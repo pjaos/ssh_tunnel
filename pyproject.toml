@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ssh-tunnel"
+version = "0.1.0"
+description = ""
+authors = ["Paul Austen <pausten.os@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+paramiko = "*"
+p3lib = "*"
+pyflakes = "*"
+
+[tool.poetry.scripts]
+ssh_tunnel = "ssh_tunnel.ssh_tunnel:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
