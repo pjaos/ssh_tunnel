@@ -107,7 +107,7 @@ def main():
         parser = argparse.ArgumentParser(description="Allows the user to create a forward (local -> ssh server) or reverse (ssh server - > local) connection tunnelled down an ssh connection.", formatter_class=argparse.RawDescriptionHelpFormatter)
         parser.add_argument("-d", "--debug",                action='store_true', help="Enable debugging.")
         parser.add_argument("-s", "--ssh_server_address",   help="The SSH server address.", default=None)
-        parser.add_argument("-p", "--port",                 type=int, help="The TCP port of the SSH server (default=22).")
+        parser.add_argument("-p", "--port",                 type=int, help="The TCP port of the SSH server (default=22).", default=22)
         parser.add_argument("-u", "--username",             help="The username to log into the SSH server with.", default=None)
         parser.add_argument("-f", "--forward",              help="The local TCP port followed by the remote (ssh server) TCP port to connect to (comma separated). E.G 8080,80 = When a TCP connect is made to the local TCP port 8080 it is connected to the remote (ssh server) port 80.", default=None)
         parser.add_argument("-r", "--reverse",              help="The remote (ssh server) TCP port followed by the local TCP port to connect to (comma separated). E.G 8080,80 = When a TCP connect is made to the the ssh server port 8080 it is connected to the local port 80.", default=None)
