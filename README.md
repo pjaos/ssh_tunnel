@@ -1,5 +1,5 @@
 # A Python ssh tunnel 
-This program allows an ssh tunnel to be created from the local machine to an SSH server. It was primarily written to allow ssh port forwarding on Windows machines that did not have openssh installed. It support both forward and reverse ssh port forwarding.
+This program allows an ssh tunnel to be created from the local machine to an SSH server. It was primarily written to allow ssh port forwarding on Windows machines that did not have openssh installed. It supports both forward and reverse ssh port forwarding.
 
 # Building
 To build the ssh_tunnel program run build.bat as shown below after ensuring python (3.12 or greater) and poetry are installed.
@@ -39,6 +39,8 @@ Ignoring:
 C:\git_repos\ssh_tunnel>
 ```
 
+This creates the *.whl file in the dist folder which can be installed using pipx.
+
 # Installation
 To install the ssh_tunnel program run the following commands after installing python (3.12 or greater) and pipx.
 
@@ -72,7 +74,7 @@ options:
                         connected to the remote (ssh server) port 80.
   -r REVERSE, --reverse REVERSE
                         The remote (ssh server) TCP port followed by the local TCP port to connect to (comma
-                        separated). E.G 8080,80 = When a TCP connect is made to the the ssh server port 8080 it is
+                        separated). E.G 80,8080 = When a TCP connect is made to the the ssh server port 8080 it is
                         connected to the local port 80.
   -t DEST_HOST, --dest_host DEST_HOST
                         The destination host address (default = localhost)
